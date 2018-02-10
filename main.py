@@ -12,7 +12,7 @@ from vector import *
 import matplotlib.pyplot as plt
 
 #LOADED VIDEO
-video = "videos/video-0.avi"
+video = "videos/video-1.avi"
 v = cv2.VideoCapture(video)
 
 #STARTING AND END POINT OF TWO LINES
@@ -235,7 +235,7 @@ def main():
                         if elem['hasPassed1'] == False:
                             elem['hasPassed1'] = True
                             print ("ADDING: ") + format(elem['value'])
-                            cv2.imshow('imagee',elem['image'])
+                            #cv2.imshow('NumImage',elem['image'])
                             cv2.waitKey()
                             final_sum = final_sum + elem['value']
                             print("CURRENT SUM IS: ", format(final_sum))
@@ -245,12 +245,12 @@ def main():
                         if elem['hasPassed2'] == False:
                             elem['hasPassed2'] = True
                             print ("SUBTRACTING: ") + format(elem['value'])
-                            cv2.imshow('imagee', elem['image'])
+                            #cv2.imshow('NumImage', elem['image'])
                             cv2.waitKey()
                             final_sum = final_sum - elem['value']
                             print("CURRENT SUM IS: ", format(final_sum))
         f=f+1  #NEXT FRAME
-        #cv2.imshow('frame', currentFrame)
+        cv2.imshow('CurrentFrame', currentFrame)
         #print("FRAME NUMBER: ", f)
         k = cv2.waitKey(30) & 0xff
         if k == 27:
