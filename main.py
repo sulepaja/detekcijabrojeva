@@ -234,8 +234,7 @@ def main():
                     if dist < 9 :
                         if elem['hasPassed1'] == False:
                             elem['hasPassed1'] = True
-                            print ("ADDING: ") + format(elem['value'])
-                            #cv2.imshow('NumImage',elem['image'])
+                            print ("ADDING: ") + format(elem['value'])                            
                             cv2.waitKey()
                             final_sum = final_sum + elem['value']
                             print("CURRENT SUM IS: ", format(final_sum))
@@ -244,8 +243,7 @@ def main():
                     if dist2 < 9:
                         if elem['hasPassed2'] == False:
                             elem['hasPassed2'] = True
-                            print ("SUBTRACTING: ") + format(elem['value'])
-                            #cv2.imshow('NumImage', elem['image'])
+                            print ("SUBTRACTING: ") + format(elem['value'])                            
                             cv2.waitKey()
                             final_sum = final_sum - elem['value']
                             print("CURRENT SUM IS: ", format(final_sum))
